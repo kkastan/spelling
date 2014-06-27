@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Games</string>
+    <string name="spelling_activity_name">Spelling</string>
+    <string name="button_play">Play</string>
+</resources>
