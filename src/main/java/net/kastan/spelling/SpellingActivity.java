@@ -20,8 +20,8 @@ import java.util.Map;
 
 public class SpellingActivity extends Activity {
 
-  private static String[] gameWords = { "cat", "dog", "car", "bat", "owl" };
-  private static int[] gameImageIds = { R.drawable.cat, R.drawable.dog, R.drawable.c63amg, R.drawable.bat, R.drawable.owl };
+  private static String[] gameWords = { "cat", "dog", "car", "fox","bat", "owl" };
+  private static int[] gameImageIds = { R.drawable.cat, R.drawable.dog, R.drawable.c63amg, R.drawable.fox, R.drawable.bat, R.drawable.owl };
   private int iteration = 0;
 
   private Game game;
