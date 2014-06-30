@@ -1,6 +1,8 @@
 package net.kastan.spelling.engine;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * Created by karlkastan on 6/26/14.
@@ -70,13 +72,24 @@ public class Game {
 
     char[] chars = new char[word.length];
 
+    Set<Character> usedChars = new HashSet<Character>();
+    usedChars.add(word[position]);
+
     for(int i=0; i<word.length; i++) {
       if(i == index) {
         chars[i] = word[position];
       } else {
-        char c = alphabet[rand.nextInt(2000) % 26];
-        // TODO avoid duplicates
-        chars[i] = c;
+        int attempt = 0;
+        boolean done = false;
+
+        while(!done && attempt < 10) {
+          char c = alphabet[rand.nextInt(2000) % 26];
+          if(!usedChars.contains(c)) {
+            chars[i] = c;
+            usedChars.add(c);
+            done = true;
+          }
+        }
       }
     }
 
